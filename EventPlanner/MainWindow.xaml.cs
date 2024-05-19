@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventPlanner.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,25 @@ namespace EventPlanner
             InitializeComponent();
         }
 
+      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //MyServiceClient client = new MyServiceClient();
+            try
+            {
+                //string result = client.GetData();
+                //  MessageBox.Show(result);
+                LoginView loginView = new LoginView();
+                loginView.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+            finally
+            {
+               // client.Close();
+            }
         }
     }
 }
