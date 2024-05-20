@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventPlanner.Model
 {
+    
     public class Event : BindableBase
     {
         public string Name { get; set; }

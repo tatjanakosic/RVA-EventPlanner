@@ -18,32 +18,38 @@ namespace Server.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<Event>> GetAllEntitiesAsync()
+        public void AddNewEntity(Event entity)
         {
-            return await _unitOfWork.Repository<Event>().GetAllAsync();
+            var repository = _unitOfWork.Repository<Event>();
+            repository.Add(entity);
+            _unitOfWork.Commit();
         }
 
-        public async Task<Event> GetEntityByIdAsync(int id)
+        public IEnumerable<Event> GetAllEntities()
         {
-            return await _unitOfWork.Repository<Event>().GetByIdAsync(id);
+            var repository = _unitOfWork.Repository<Event>();
+            return repository.GetAll();
         }
 
-        public async Task AddEntityAsync(Event entity)
+        public Event GetEntityById(int id)
         {
-            await _unitOfWork.Repository<Event>().AddAsync(entity);
-            await _unitOfWork.CompleteAsync();
+            var repository = _unitOfWork.Repository<Event>();
+            return repository.GetById(id);
         }
 
-        public async Task UpdateEntityAsync(Event entity)
+        public void UpdateEntity(Event entity)
         {
-            await _unitOfWork.Repository<Event>().UpdateAsync(entity);
-            await _unitOfWork.CompleteAsync();
+            var repository = _unitOfWork.Repository<Event>();
+            repository.Update(entity);
+            _unitOfWork.Commit();
         }
 
-        public async Task DeleteEntityAsync(Event entity)
+        public void DeleteEntity(Event entity)
         {
-            await _unitOfWork.Repository<Event>().DeleteAsync(entity);
-            await _unitOfWork.CompleteAsync();
+            var repository = _unitOfWork.Repository<Event>();
+            repository.Delete(entity);
+            _unitOfWork.Commit();
         }
+
     }
 }

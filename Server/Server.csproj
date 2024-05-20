@@ -193,12 +193,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Events.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IEventService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryLayer\UnitOfWork.cs" />
     <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\EventServiceDI.cs" />
+    <Compile Include="Services\ServiceImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -225,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{03203352-7d1c-46e0-ba28-bf9c14d99a65}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

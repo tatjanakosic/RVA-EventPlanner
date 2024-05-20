@@ -7,50 +7,46 @@ using System.Threading.Tasks;
 
 namespace Server.DBCRUD
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
 
         private readonly DbContext _context;
-        private readonly DbSet<T> _dbSet;
+        private readonly DbSet<TEntity> _dbSet;
 
         public Repository(DbContext context)
         {
             _context = context;
-            _dbSet = context.Set<T>();
+            _dbSet = context.Set<TEntity>();
         }
 
-
-        public async Task AddAsync(T entity)
+        public void Add(TEntity entity)
         {
-            //return  await _dbSet.AddAsync(entity);
-            await SaveChangesAsync();
+            _dbSet.Add(entity);
         }
 
-        public async Task DeleteAsync(T entity)
+        public void Delete(TEntity entity)
         {
+            if (_context.Entry(entity).State == EntityState.Detached)
+            {
+                _dbSet.Attach(entity);
+            }
             _dbSet.Remove(entity);
-            await SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public IEnumerable<TEntity> GetAll()
         {
-            return await _dbSet.ToListAsync();
+            return _dbSet.ToList();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public TEntity GetById(object id)
         {
-            return await _dbSet.FindAsync(id);
+            return _dbSet.Find(id);
         }
 
-        public async Task SaveChangesAsync()
+        public void Update(TEntity entity)
         {
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(T entity)
-        {
-          _context.Entry(entity).State = EntityState.Modified;
-            await SaveChangesAsync();
+            _dbSet.Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
         }
     }
 }

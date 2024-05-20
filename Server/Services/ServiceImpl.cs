@@ -1,18 +1,21 @@
-﻿
+﻿using Common.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Server.Services
 {
-   [ServiceBehavior]
-  public  class EventService : IEventService
+    public class ServiceImpl : IService
     {
+        public string GetData()
+        {
+            return "We are connected!";
+        }
 
-        private EventsEntities db = new EventsEntities();
+        /*
+         * private EventsEntities db = new EventsEntities();
 
         public List<Event> GetEvents()
         {
@@ -41,10 +44,7 @@ namespace Server.Services
             }
         }
 
-        public string GetData()
-        {
-            string data = "We are connected!";
-            return data;
-        }
+        
+         */
     }
 }

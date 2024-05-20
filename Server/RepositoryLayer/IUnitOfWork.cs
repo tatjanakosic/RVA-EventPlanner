@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace Server.RepositoryLayer
 {
+    //IUnitOfWork defines methods for committing and rolling back transactions
+    //Repositories interact with the UnitOfWork to ensure all operations are part of a single transaction
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<T> Repository<T>() where T : class;
-        Task<int> CompleteAsync();
+        IRepository<TEntity> Repository<TEntity>() where TEntity : class;
+        void Commit();
+        void RollBack();
     }
 }

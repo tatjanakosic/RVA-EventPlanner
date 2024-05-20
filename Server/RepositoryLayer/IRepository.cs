@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace Server.DBCRUD
 {
-   public interface IRepository<T> where T : class
+   public interface IRepository<TEntity> where TEntity : class
     {
 
-        Task<T> GetByIdAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync();
-        Task AddAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(T entity);
-        Task SaveChangesAsync();
+        void Add(TEntity entity);
+        void Delete(TEntity entity);
+        void Update(TEntity entity);
+        IEnumerable<TEntity> GetAll();
+        TEntity GetById(object id);
+
+
     }
 }

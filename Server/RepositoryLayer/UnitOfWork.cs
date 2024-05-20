@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace Server.RepositoryLayer
 {
+    //UnitOfWork implements IUnitOfWork and manages the lifecycle and tracking of entity changes
     public class UnitOfWork : IUnitOfWork
     {
 
         private readonly DbContext _context;
-        private readonly Dictionary<Type, object> _repositories = new Dictionary<Type, object>();
+        private Dictionary<Type, object> _repositories;
 
 
         public UnitOfWork(DbContext context)
@@ -20,24 +21,53 @@ namespace Server.RepositoryLayer
             _context = context;
         }
 
-        public async Task<int> CompleteAsync()
+        public void Commit()
         {
-            return await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
-        public IRepository<T> Repository<T>() where T : class
+        public void RollBack()
         {
-            if (!_repositories.ContainsKey(typeof(T)))
+            foreach (var entry in _context.ChangeTracker.Entries())
             {
-                _repositories[typeof(T)] = new Repository<T>(_context);
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                    case EntityState.Modified:
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Deleted:
+                        entry.Reload();
+                        break;
+                }
+            }
+        }
+      
+
+        public IRepository<TEntity> Repository<TEntity>() where TEntity : class
+        {
+            if (_repositories == null)
+            {
+                _repositories = new Dictionary<Type, object>();
             }
 
-            return (IRepository<T>)_repositories[typeof(T)];
+            var type = typeof(TEntity);
+            if (!_repositories.ContainsKey(type))
+            {
+                var repositoryType = typeof(Repository<>);
+                var repositoryInstance = Activator.CreateInstance(repositoryType.MakeGenericType(typeof(TEntity)), _context);
+                _repositories.Add(type, repositoryInstance);
+            }
+
+            return (IRepository<TEntity>)_repositories[type];
         }
 
         public void Dispose()
         {
             _context.Dispose();
         }
+
     }
 }
