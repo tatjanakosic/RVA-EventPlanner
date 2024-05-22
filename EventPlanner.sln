@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33328.57
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventPlanner", "EventPlanner\EventPlanner.csproj", "{3DEF3186-15F0-42EA-A1B5-727E025B41CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{031A95E7-0919-49EF-861C-D3BA38CAECF7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{03203352-7D1C-46E0-BA28-BF9C14D99A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{56D09D34-F08E-4872-85B8-1D9EC427346D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{03203352-7D1C-46E0-BA28-BF9C14D99A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03203352-7D1C-46E0-BA28-BF9C14D99A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03203352-7D1C-46E0-BA28-BF9C14D99A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D09D34-F08E-4872-85B8-1D9EC427346D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D09D34-F08E-4872-85B8-1D9EC427346D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D09D34-F08E-4872-85B8-1D9EC427346D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D09D34-F08E-4872-85B8-1D9EC427346D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

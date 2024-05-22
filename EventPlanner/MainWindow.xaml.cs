@@ -1,4 +1,4 @@
-﻿using Common.Interfaces;
+﻿using Common.ServiceContracts;
 using EventPlanner.Views;
 using System;
 using System.Collections.Generic;

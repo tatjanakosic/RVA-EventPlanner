@@ -1,5 +1,5 @@
-﻿using Common.Interfaces;
-using Server.Interfaces;
+﻿using Common.ServiceContracts;
+
 using Server.Services;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,8 @@ namespace Server
         {
             Console.WriteLine("Zivi smo, da vidimo sta se radi ovde :)");
 
-           string baseAddress = "net.tcp://localhost:4000/ServiceImpl";
+            #region Stari kod
+            string baseAddress = "net.tcp://localhost:4000/ServiceImpl";
            // Uri baseAddress = new Uri("net.tcp://localhost:4000/EventService");
 
             using (ServiceHost host = new ServiceHost(typeof(ServiceImpl)))
@@ -25,12 +26,7 @@ namespace Server
 
                 host.AddServiceEndpoint(typeof(IService), new NetTcpBinding(), baseAddress);
 
-               // Enable metadata exchange
-               // ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-               // smb.HttpGetEnabled = false;
-               // smb.MetadataExporter.PolicyVersion = PolicyVersion.Policy15;
-               // host.Description.Behaviors.Add(smb);
-               // host.AddServiceEndpoint(ServiceMetadataBehavior.MexContractName, MetadataExchangeBindings.CreateMexTcpBinding(), "mex");
+             
 
                 try
                 {
@@ -47,6 +43,20 @@ namespace Server
                 }
 
             }
+
+            #endregion
+
+            #region novi 
+
+           // WCFServiceHost services = new WCFServiceHost();
+
+            //services.Open();
+
+            //Console.ReadKey();
+
+            //services.Close();
+
+            #endregion
         }
     }
 }
