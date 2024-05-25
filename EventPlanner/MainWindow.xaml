@@ -9,6 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -19,6 +20,9 @@
 
 
         <Button Grid.Row="2" Grid.Column="0" Margin="5" HorizontalAlignment="Left" Width="75" Click="Button_Click">Login</Button>
+
+
+        <Button Grid.Row="2" Grid.Column="1" Margin="5" HorizontalAlignment="Left" Width="75" Click="Button_Click_1" >Dashboard</Button>
 
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="5" HorizontalAlignment="Left" x:Name="lblError" Foreground="Red"/>
     </Grid>

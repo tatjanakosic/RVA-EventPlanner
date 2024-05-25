@@ -23,5 +23,87 @@ namespace EventPlanner.Views
         {
             InitializeComponent();
         }
+
+        /* za view model 
+         * 
+         public ObservableCollection<Planner> Planners { get; set; }
+
+    private ObservableCollection<Planner> _filteredPlanners;
+    public ObservableCollection<Planner> FilteredPlanners
+         */
+
+
+
+
+
+        // Dugmici menija
+
+        private void addNewPlanner_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editProfile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void backupPlanners_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void addNewUser_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+
+
+        //Dugmici liste planera
+
+
+        private void showEvents_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void addEvent_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deletePlanner_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void searchButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void undo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void redo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void refresh_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

@@ -7,6 +7,85 @@
         mc:Ignorable="d"
         Title="PlannerDashboard" Height="450" Width="800">
     <Grid>
-        
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42"/>
+            <RowDefinition Height="42"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="42"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="5" Margin="6" Background="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Add new planner" x:Name="addNewPlanner" Click="addNewPlanner_Click" Margin ="10,0"/>
+            <Button Grid.Column="1" Content="Edit your prifile" x:Name="editProfile" Click="editProfile_Click" Margin ="10,0"/>
+            <Button Grid.Column="2" Content="Backup planners" x:Name="backupPlanners" Click="backupPlanners_Click" Margin ="10,0"/>
+            <Button Grid.Column="3" Content="Add new user" x:Name="addNewUser" Click="addNewUser_Click" Margin ="10,0"/>
+            <Button Grid.Column="4" Content="Log out" x:Name="logOut" Click="logOut_Click" Margin ="10,0" HorizontalAlignment="Right" />
+
+        </Grid>
+
+        <Label Grid.Row="1" HorizontalAlignment="Center" FontSize="22" FontWeight="Medium">PLANNERS</Label>
+
+        <ListView Grid.Row="2" x:Name="plannersListView"  ItemsSource="{Binding Planners}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="100"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="400"/>
+                    <GridViewColumn Header="Options">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Content="Show Events" x:Name="showEvents" Click="showEvents_Click"/>
+                                    <Button Content="Add Event" x:Name="addEvent" Click="addEvent_Click"/>
+                                    <Button Content="Delete Planner" x:Name="deletePlanner" Click="deletePlanner_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <StackPanel Orientation="Vertical" Margin="10,0">
+                
+            <TextBlock Text="Sort by:"/>
+            <ComboBox x:Name="sortByComboBox" Width="100">
+                <ComboBoxItem Content="Name (A-Z)" Tag="NameAsc"/>
+                <ComboBoxItem Content="Name (Z-A)" Tag="NameDesc"/>
+                <ComboBoxItem Content="ID (Asc)" Tag="IdAsc"/>
+                <ComboBoxItem Content="ID (Desc)" Tag="IdDesc"/>
+                <ComboBoxItem Content="Date (Asc)" Tag="IdDesc"/>
+                <ComboBoxItem Content="Date (Desc)" Tag="IdDesc"/>
+                
+            </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="10, 0">
+                
+                <TextBlock Text="Search:"/>
+                <StackPanel Orientation="Horizontal">
+                    
+                <TextBox x:Name="searchTextBox" Width="150"/>
+                <Button Content="Search" x:Name="searchButton" Click="searchButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Undo" x:Name="undo" Click="undo_Click"  Margin="10,8"/>
+                <Button Content="Redo" x:Name="redo" Click="redo_Click"  Margin="10,8"/>
+                <Button Content="Refresh" x:Name="refresh" Click="refresh_Click" Margin="10,8"/>
+            </StackPanel>
+        </StackPanel>
+
+
+
     </Grid>
 </Window>

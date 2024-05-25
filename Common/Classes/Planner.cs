@@ -14,6 +14,7 @@ namespace Common.Classes
         [DataMember]
         [Key]
         public string Id { get; set; }
+        public string Name { get; set; }
 
         [DataMember]
         public List<Event> Events { get; set; }
