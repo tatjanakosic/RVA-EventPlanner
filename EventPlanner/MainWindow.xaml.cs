@@ -57,5 +57,12 @@ namespace EventPlanner
             PlannerDashboard plannerDashboard = new PlannerDashboard();
             plannerDashboard.Show();
         }
+        
+        
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            EventDashboard eventDashboard = new EventDashboard();
+            eventDashboard.Show();
+        }
     }
 }
