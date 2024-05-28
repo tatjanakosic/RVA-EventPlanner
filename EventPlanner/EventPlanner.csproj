@@ -161,6 +161,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\AddEventViewModel.cs" />
+    <Compile Include="ViewModel\AddPlannerViewModel.cs" />
+    <Compile Include="ViewModel\AddUserViewModel.cs" />
+    <Compile Include="ViewModel\EventDashboardViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\LogOutViewModel.cs" />
+    <Compile Include="ViewModel\PlannerDashboardViewModel.cs" />
     <Compile Include="Views\AddEventView.xaml.cs">
       <DependentUpon>AddEventView.xaml</DependentUpon>
     </Compile>
@@ -270,9 +277,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{03203352-7d1c-46e0-ba28-bf9c14d99a65}</Project>
