@@ -1,0 +1,39 @@
+﻿<Window x:Class="EventPlanner.Views.AddEventView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventPlanner.Views"
+        mc:Ignorable="d"
+        Title="AddEventView" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Name:" />
+            <TextBox Text="{Binding Event.Name}" />
+
+            <Label Content="Location:" />
+            <TextBox Text="{Binding Event.Location}" />
+
+            <Label Content="Topic:" />
+            <TextBox Text="{Binding Event.Topic}" />
+
+            <Label Content="Date:" />
+            <DatePicker SelectedDate="{Binding Event.Date}" />
+
+            <Label Content="Start Time:" />
+            <DatePicker SelectedDate="{Binding Event.StartTime}" />
+
+            <Label Content="End Time:" />
+            <DatePicker SelectedDate="{Binding Event.EndTime}" />
+
+            <Label Content="Duration (hours):" />
+            <TextBox Text="{Binding Event.Duration}" />
+
+            <StackPanel Orientation="Horizontal">
+                
+            <Button Content="Add Event" Command="{Binding AddEventCommand}" />
+            <Button Content="Cancel" Command="{Binding CancelCommand}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
