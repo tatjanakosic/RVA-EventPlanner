@@ -1,11 +1,16 @@
-﻿<Window x:Class="EventPlanner.Views.EventDashboard"
+﻿<Window x:Class="EventPlanner.Views.EventDashboardView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EventPlanner.Views"
+        xmlns:local="clr-namespace:EventPlanner.ViewModel"
         mc:Ignorable="d"
         Title="EventDashboard" Height="450" Width="800">
+
+    <Window.DataContext>
+        <local:EventDashboardViewModel/>
+    </Window.DataContext>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="48"/>
@@ -21,8 +26,8 @@
 
             <Label Grid.Column="1" HorizontalAlignment="Center" FontSize="28" FontWeight="Medium">Events</Label>
 
-            <Button Grid.Column="0" Content="Back" x:Name="back" Click="back_Click"  Margin ="10,0" HorizontalAlignment="Center" Width="150" />
-            <Button Grid.Column="2" Content="AddEvent" x:Name="addEvent" Click="addEvent_Click"  Margin ="10,0" HorizontalAlignment="Center" Width="150" />
+            <Button Grid.Column="0" Content="Back" x:Name="back" Margin ="10,0" HorizontalAlignment="Center" Width="150" />
+            <Button Grid.Column="2" Content="AddEvent" x:Name="addEvent" Margin ="10,0" HorizontalAlignment="Center" Width="150" Command="{Binding AddEvent}" />
 
 
 
@@ -40,8 +45,8 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Content="Update Event" x:Name="updateEvent" Click="updateEvent_Click" Command="{Binding UpdateEventCommand}" CommandParameter="{Binding}"/>
-                                        <Button Content="Delete Event" x:Name="deleteEvent" Click="deleteEvent_Click" Command="{Binding DeleteEventCommand}" CommandParameter="{Binding}"/>
+                                        <Button Content="Update Event" x:Name="updateEvent" Command="{Binding UpdateEventCommand}" CommandParameter="{Binding}"/>
+                                        <Button Content="Delete Event" x:Name="deleteEvent" Command="{Binding DeleteEventCommand}" CommandParameter="{Binding}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

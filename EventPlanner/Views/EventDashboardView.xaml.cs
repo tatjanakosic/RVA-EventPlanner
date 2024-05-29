@@ -17,32 +17,13 @@ namespace EventPlanner.Views
     /// <summary>
     /// Interaction logic for EventDashboard.xaml
     /// </summary>
-    public partial class EventDashboard : Window
+    public partial class EventDashboardView : Window
     {
-        public EventDashboard()
+        public EventDashboardView()
         {
             InitializeComponent();
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void addEvent_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void updateEvent_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void deleteEvent_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
 

@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -46,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Classes\Event.cs" />
     <Compile Include="Classes\Planner.cs" />
+    <Compile Include="Classes\RelayCommand.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="ServiceContracts\EventContracts\IEventService.cs" />
     <Compile Include="ServiceContracts\IService.cs" />

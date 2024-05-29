@@ -54,14 +54,14 @@ namespace EventPlanner
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            PlannerDashboard plannerDashboard = new PlannerDashboard();
+            PlannerDashboardView plannerDashboard = new PlannerDashboardView();
             plannerDashboard.Show();
         }
         
         
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            EventDashboard eventDashboard = new EventDashboard();
+            EventDashboardView eventDashboard = new EventDashboardView();
             eventDashboard.Show();
         }
     }

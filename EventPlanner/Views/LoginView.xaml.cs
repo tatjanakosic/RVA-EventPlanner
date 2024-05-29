@@ -23,7 +23,7 @@ namespace EventPlanner.Views
         {
             InitializeComponent();
         }
-
+        /*
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
             int lg;
@@ -36,7 +36,7 @@ namespace EventPlanner.Views
             else if (VerifyUser(txtUsername.Text, passwordbox.Password, out lg) && lg == 2)
             {
                 MessageBox.Show("Successfully logged in as user!", "", MessageBoxButton.OK, MessageBoxImage.Information);
-                PlannerDashboard plannerDashboard = new PlannerDashboard();
+                PlannerDashboardView plannerDashboard = new PlannerDashboardView();
                 plannerDashboard.Show();
             }
             else
@@ -48,6 +48,7 @@ namespace EventPlanner.Views
             passwordbox.Password = "";
         }
 
+        */
         private bool VerifyUser(string username, string password, out int logcode)
         {
             bool result = false;

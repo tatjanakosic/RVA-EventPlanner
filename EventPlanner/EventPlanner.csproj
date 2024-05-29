@@ -177,14 +177,14 @@
     <Compile Include="Views\AddUserView.xaml.cs">
       <DependentUpon>AddUserView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EventDashboard.xaml.cs">
-      <DependentUpon>EventDashboard.xaml</DependentUpon>
+    <Compile Include="Views\EventDashboardView.xaml.cs">
+      <DependentUpon>EventDashboardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PlannerDashboard.xaml.cs">
-      <DependentUpon>PlannerDashboard.xaml</DependentUpon>
+    <Compile Include="Views\PlannerDashboardView.xaml.cs">
+      <DependentUpon>PlannerDashboardView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -227,7 +227,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EventDashboard.xaml">
+    <Page Include="Views\EventDashboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -239,7 +239,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PlannerDashboard.xaml">
+    <Page Include="Views\PlannerDashboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

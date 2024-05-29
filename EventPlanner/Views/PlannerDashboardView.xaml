@@ -1,11 +1,16 @@
-﻿<Window x:Class="EventPlanner.Views.PlannerDashboard"
+﻿<Window x:Class="EventPlanner.Views.PlannerDashboardView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EventPlanner.Views"
+        xmlns:local="clr-namespace:EventPlanner.ViewModel"
         mc:Ignorable="d"
-        Title="PlannerDashboard" Height="450" Width="800">
+        Title="PlannerDashboard" Height="450" Width="800"> 
+
+    <Window.DataContext>
+        <local:PlannerDashboardViewModel/>
+    </Window.DataContext>
+
     <Grid>
 
 
@@ -24,11 +29,11 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Add new planner" x:Name="addNewPlanner" Click="addNewPlanner_Click" Margin ="10,0"/>
-            <Button Grid.Column="1" Content="Edit your prifile" x:Name="editProfile" Click="editProfile_Click" Margin ="10,0"/>
-            <Button Grid.Column="2" Content="Backup planners" x:Name="backupPlanners" Click="backupPlanners_Click" Margin ="10,0"/>
-            <Button Grid.Column="3" Content="Add new user" x:Name="addNewUser" Click="addNewUser_Click" Margin ="10,0"/>
-            <Button Grid.Column="4" Content="Log out" x:Name="logOut" Click="logOut_Click" Margin ="10,0" HorizontalAlignment="Right" />
+            <Button Grid.Column="0" Content="Add new planner" x:Name="addNewPlanner" Margin ="10,0" Command="{Binding AddNewPlannerCommand}"/>
+            <Button Grid.Column="1" Content="Edit your prifile" x:Name="editProfile"  Margin ="10,0"/>
+            <Button Grid.Column="2" Content="Backup planners" x:Name="backupPlanners"  Margin ="10,0"/>
+            <Button Grid.Column="3" Content="Add new user" x:Name="addNewUser" Margin ="10,0"/>
+            <Button Grid.Column="4" Content="Log out" x:Name="logOut" Margin ="10,0" HorizontalAlignment="Right" />
 
         </Grid>
 
@@ -43,9 +48,9 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button Content="Show Events" x:Name="showEvents" Click="showEvents_Click"/>
-                                    <Button Content="Add Event" x:Name="addEvent" Click="addEvent_Click"/>
-                                    <Button Content="Delete Planner" x:Name="deletePlanner" Click="deletePlanner_Click"/>
+                                    <Button Content="Show Events" x:Name="showEvents" />
+                                    <Button Content="Add Event" x:Name="addEvent" />
+                                    <Button Content="Delete Planner" x:Name="deletePlanner"/>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -75,13 +80,13 @@
                 <StackPanel Orientation="Horizontal">
                     
                 <TextBox x:Name="searchTextBox" Width="150"/>
-                <Button Content="Search" x:Name="searchButton" Click="searchButton_Click"/>
+                <Button Content="Search" x:Name="searchButton" />
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Undo" x:Name="undo" Click="undo_Click"  Margin="10,8"/>
-                <Button Content="Redo" x:Name="redo" Click="redo_Click"  Margin="10,8"/>
-                <Button Content="Refresh" x:Name="refresh" Click="refresh_Click" Margin="10,8"/>
+                <Button Content="Undo" x:Name="undo" Margin="10,8"/>
+                <Button Content="Redo" x:Name="redo" Margin="10,8"/>
+                <Button Content="Refresh" x:Name="refresh" Margin="10,8"/>
             </StackPanel>
         </StackPanel>
 
