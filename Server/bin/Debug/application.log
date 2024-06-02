@@ -1,0 +1,84 @@
+2024-06-01 14:44:10,441 INFO Server.Server - Server created
+2024-06-01 14:44:10,578 DEBUG Server.Program - Server program started
+2024-06-01 14:44:11,702 INFO Server.Server - Server opened
+2024-06-01 14:44:32,625 INFO Server.ModelContext - Database empty. Adding first admin
+2024-06-01 14:44:58,445 DEBUG Server.ModelContext - Getting user admin
+2024-06-01 14:44:58,447 INFO Server.ServiceAuthenticator - User admin|admin authenticated
+2024-06-01 14:46:06,150 DEBUG Server.ModelContext - Getting user admin
+2024-06-01 14:46:06,151 INFO Server.ServiceAuthenticator - User admin|admin authenticated
+2024-06-02 15:57:21,630 INFO Server.Server - Server created
+2024-06-02 15:57:21,702 DEBUG Server.Program - Server program started
+2024-06-02 15:57:22,550 INFO Server.Server - Server opened
+2024-06-02 15:57:53,869 INFO Server.Server - Server closed
+2024-06-02 15:57:53,869 DEBUG Server.Program - Server program closed
+2024-06-02 15:57:59,175 INFO Server.Server - Server created
+2024-06-02 15:57:59,210 DEBUG Server.Program - Server program started
+2024-06-02 15:57:59,936 INFO Server.Server - Server opened
+2024-06-02 15:58:32,751 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 15:58:32,752 INFO Server.ServiceAuthenticator - User admin|admin authenticated
+2024-06-02 15:58:33,386 INFO Server.Connection - User admin|admin logged in
+2024-06-02 15:58:33,402 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 15:58:33,587 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 15:58:33,696 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 15:59:07,015 DEBUG Server.ModelContext - Checking existence of user: CicaPera
+2024-06-02 15:59:07,251 INFO Server.ModelContext - Added user: CicaPera|pero1234
+2024-06-02 15:59:12,686 INFO Server.Connection - User admin logged out
+2024-06-02 15:59:25,200 DEBUG Server.ModelContext - Getting user CicaPera
+2024-06-02 15:59:25,201 WARN Server.ServiceAuthenticator - Invalid login credentials: CicaPera|pera1234 does not match
+2024-06-02 16:00:20,206 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:00:20,206 INFO Server.ServiceAuthenticator - User admin|admin authenticated
+2024-06-02 16:00:20,223 INFO Server.Connection - User admin|admin logged in
+2024-06-02 16:00:20,229 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:00:20,235 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:00:20,300 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:00:28,326 DEBUG Server.Connection - Editing user: admin
+2024-06-02 16:00:28,364 INFO Server.ModelContext - Edited user: admin
+2024-06-02 16:00:44,408 INFO Server.Connection - User admin logged out
+2024-06-02 16:00:53,411 DEBUG Server.ModelContext - Getting user CicaPera
+2024-06-02 16:00:53,411 INFO Server.ServiceAuthenticator - User CicaPera|pero1234 authenticated
+2024-06-02 16:00:53,424 INFO Server.Connection - User CicaPera|pero1234 logged in
+2024-06-02 16:00:53,431 DEBUG Server.ModelContext - Getting user CicaPera
+2024-06-02 16:00:53,439 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:00:53,503 DEBUG Server.ModelContext - Getting user CicaPera
+2024-06-02 16:00:58,579 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:01:00,039 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:01:23,694 INFO Server.ModelContext - Added planner: 1|PerinPlaner
+2024-06-02 16:01:23,697 DEBUG Server.Connection - Notified all users for changes
+2024-06-02 16:01:23,712 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:01:23,730 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:01:36,873 INFO Server.ModelContext - Added event 1|Brijanje
+2024-06-02 16:01:36,874 DEBUG Server.Connection - Notified all users for changes
+2024-06-02 16:01:36,886 DEBUG Server.ModelContext - Getting all events
+2024-06-02 16:01:36,913 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:02:24,549 INFO Server.Connection - User CicaPera logged out
+2024-06-02 16:02:31,551 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:02:31,552 INFO Server.ServiceAuthenticator - User admin|admin authenticated
+2024-06-02 16:02:31,566 INFO Server.Connection - User admin|admin logged in
+2024-06-02 16:02:31,574 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:02:31,579 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:02:31,640 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:02:43,149 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:03:15,396 DEBUG Server.ModelContext - Getting planner 1
+2024-06-02 16:03:15,419 INFO Server.ModelContext - Added planner: 2|PerinPlaner
+2024-06-02 16:03:15,419 DEBUG Server.Connection - Notified all users for changes
+2024-06-02 16:03:15,425 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:03:15,444 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:03:59,637 INFO Server.Connection - User admin logged out
+2024-06-02 16:26:25,343 INFO Server.Server - Server created
+2024-06-02 16:26:25,479 DEBUG Server.Program - Server program started
+2024-06-02 16:26:26,508 INFO Server.Server - Server opened
+2024-06-02 16:27:25,853 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:27:25,855 INFO Server.ServiceAuthenticator - User admin|admin authenticated
+2024-06-02 16:27:26,944 INFO Server.Connection - User admin|admin logged in
+2024-06-02 16:27:26,971 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:27:27,321 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:27:27,522 DEBUG Server.ModelContext - Getting user admin
+2024-06-02 16:27:33,040 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:27:34,124 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:27:52,628 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:27:54,867 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:28:02,772 DEBUG Server.ModelContext - Getting planner 2
+2024-06-02 16:28:03,193 INFO Server.ModelContext - Removed planner: id=2
+2024-06-02 16:28:03,197 DEBUG Server.Connection - Notified all users for changes
+2024-06-02 16:28:03,205 DEBUG Server.ModelContext - Getting all planners
+2024-06-02 16:28:13,257 INFO Server.Connection - User admin logged out

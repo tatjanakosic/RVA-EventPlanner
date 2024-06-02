@@ -1,0 +1,66 @@
+2024-06-01 14:44:57,473 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-01 14:44:59,248 INFO Client.ViewModel.LoginViewModel - Login successful admin|admin
+2024-06-01 14:46:04,620 FATAL Client.ViewModel.LoginViewModel - Unrecognized error
+System.TimeoutException: This request operation sent to net.tcp://localhost:11223/ did not receive a reply within the configured timeout (00:00:59.9940198).  The time allotted to this operation may have been a portion of a longer timeout.  This may be because the service is still processing the operation or because the service was unable to send a reply message.  Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DuplexChannelBinder.SyncDuplexRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.DuplexChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Common.IConnection.GetUser(String username)
+   at Client.ViewModel.DashboardViewModel.SetupUser(Object sender, EventArgs e) in C:\Users\ShitOS\Downloads\RVA-Projekat-master\Projekat\Client\ViewModel\DashboardViewModel.cs:line 36
+   at Client.Model.ChangingViewEvents.RaiseUserLoginSuccessful() in C:\Users\ShitOS\Downloads\RVA-Projekat-master\Projekat\Client\Model\ChangingViewEvents.cs:line 56
+   at Client.ViewModel.LoginViewModel.OnLogin(Object param) in C:\Users\ShitOS\Downloads\RVA-Projekat-master\Projekat\Client\ViewModel\LoginViewModel.cs:line 100
+2024-06-01 14:46:06,112 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-01 14:46:06,176 INFO Client.ViewModel.LoginViewModel - Login successful admin|admin
+2024-06-01 14:47:11,780 FATAL Client.ViewModel.LoginViewModel - Unrecognized error
+System.TimeoutException: This request operation sent to net.tcp://localhost:11223/ did not receive a reply within the configured timeout (00:00:59.9990042).  The time allotted to this operation may have been a portion of a longer timeout.  This may be because the service is still processing the operation or because the service was unable to send a reply message.  Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
+
+Server stack trace: 
+   at System.ServiceModel.Dispatcher.DuplexChannelBinder.SyncDuplexRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.DuplexChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Common.IConnection.GetUser(String username)
+   at Client.ViewModel.DashboardViewModel.SetupUser(Object sender, EventArgs e) in C:\Users\ShitOS\Downloads\RVA-Projekat-master\Projekat\Client\ViewModel\DashboardViewModel.cs:line 36
+   at Client.Model.ChangingViewEvents.RaiseUserLoginSuccessful() in C:\Users\ShitOS\Downloads\RVA-Projekat-master\Projekat\Client\Model\ChangingViewEvents.cs:line 56
+   at Client.ViewModel.LoginViewModel.OnLogin(Object param) in C:\Users\ShitOS\Downloads\RVA-Projekat-master\Projekat\Client\ViewModel\LoginViewModel.cs:line 100
+2024-06-01 14:47:14,111 INFO Client.ViewModel.LoginViewModel - Logout successful admin
+2024-06-02 15:58:32,179 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-02 15:58:33,240 INFO Client.ViewModel.LoginViewModel - Login successful admin|admin
+2024-06-02 15:59:07,257 INFO Client.ViewModel.AddUserViewModel - Added user: CicaPera|pero1234
+2024-06-02 15:59:12,685 INFO Client.ViewModel.LoginViewModel - Logout successful admin
+2024-06-02 15:59:25,180 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-02 15:59:44,846 INFO Client.ViewModel.LoginViewModel - Password does not match username
+2024-06-02 16:00:20,183 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-02 16:00:20,222 INFO Client.ViewModel.LoginViewModel - Login successful admin|admin
+2024-06-02 16:00:28,319 INFO Client.ViewModel.DashboardViewModel - Changed data of user: admin
+2024-06-02 16:00:44,407 INFO Client.ViewModel.LoginViewModel - Logout successful admin
+2024-06-02 16:00:53,397 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-02 16:00:53,424 INFO Client.ViewModel.LoginViewModel - Login successful CicaPera|pero1234
+2024-06-02 16:01:23,644 INFO Client.ViewModel.AddPlannerViewModel - Added planner: id=0
+2024-06-02 16:01:23,723 INFO Client.ViewModel.PlannersViewModel - Planner added: id=1
+2024-06-02 16:01:27,081 DEBUG Client.Model.MessageHost - Message received
+2024-06-02 16:01:36,796 DEBUG Client.Model.MessageHost - Message sent: 1
+2024-06-02 16:01:36,798 INFO Client.ViewModel.AddEventViewModel - Added event: id=0
+2024-06-02 16:01:36,890 INFO Client.ViewModel.PlannersViewModel - Event added: id=1
+2024-06-02 16:02:24,546 INFO Client.ViewModel.LoginViewModel - Logout successful CicaPera
+2024-06-02 16:02:31,536 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-02 16:02:31,565 INFO Client.ViewModel.LoginViewModel - Login successful admin|admin
+2024-06-02 16:03:15,428 INFO Client.ViewModel.PlannersViewModel - Planner doubled: id=1
+2024-06-02 16:03:59,635 INFO Client.ViewModel.LoginViewModel - Logout successful admin
+2024-06-02 16:27:24,857 DEBUG Client.ViewModel.LoginViewModel - Created factory
+2024-06-02 16:27:26,723 INFO Client.ViewModel.LoginViewModel - Login successful admin|admin
+2024-06-02 16:28:02,775 INFO Client.ViewModel.PlannersViewModel - Planner removed: id=2
+2024-06-02 16:28:13,255 INFO Client.ViewModel.LoginViewModel - Logout successful admin

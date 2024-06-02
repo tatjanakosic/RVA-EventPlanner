@@ -1,0 +1,63 @@
+﻿<Window
+    x:Class="Client.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="clr-namespace:Client.ViewModel"
+    xmlns:views="clr-namespace:Client.View"
+    Title="RVA Projekat - Client"
+    Width="800"
+    Height="450"
+    Background="{DynamicResource MaterialDesignPaper}"
+    Closing="Window_Closing"
+    ResizeMode="CanMinimize"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStyle="ToolWindow"
+    mc:Ignorable="d">
+
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel />
+    </Window.DataContext>
+
+    <Window.Resources>
+
+        <DataTemplate DataType="{x:Type viewModel:LogViewModel}">
+            <views:LogView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:LoginViewModel}">
+            <views:Login />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
+            <views:Dashboard />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:MenuViewModel}">
+            <views:MenuView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:AddUserViewModel}">
+            <views:AddUser />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:PlannersViewModel}">
+            <views:ViewPlanners />
+        </DataTemplate>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <ContentControl Content="{Binding MenuViewModel}" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <ContentControl Content="{Binding CurrentViewModel}" />
+        </Grid>
+    </Grid>
+</Window>
